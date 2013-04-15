@@ -1,0 +1,26 @@
+## Monster 1.0主要检测规则 [via](http://doc.alipay.net/pages/viewpage.action?pageId=11245188)
+- 检测是否有重复ID的标签；
+- 检测是否使用内联标签嵌套块级标签，如a嵌套div；
+- 检测https协议页面，是否使用了http协议的图片、JS、CSS等；
+- 检测compatMode、doctype是否出错；
+- 检测是否使用了HTML5不再支持的标记，如font,s,u等；
+- 检测标签是否正确关闭；
+- 检测CSS、JS、background-image文件是否为404；
+- 检测CSS、JS文件是否重复调用；
+- 检测是否引用过多外部JS、CSS文件；
+- 检测CSS、JS、HTML是否压缩；
+- 检测CSS样式表是否使用了CSS expression；
+- 检测Cookie是否超过30KB；
+- 检测是否有form标签嵌套form标签；
+- 检测是否直接在标签里定义JS事件，如 `<a href=”#”  onclick=”…”>link</a>` ；
+- 检测 `<meta charset=”utf-8″ />` 是否为 `<head>` 第一个子标签；
+- 检测一个 `<form>` 标签内部是否出现二个 `input[PAD:type=submit]` 标签；
+- 检测是否在 `<form>` 标签中使用了 `id=”submit”` 的标签；
+- 检测是否将 `<style>` 块放置在 `</head>` 前面；
+- 检测是否将 `<script>` 块放置在 `</body>` 前面；
+- 检测 `<img>` 标签是否指定alt属性；
+- 检测是否为 `input[PAD:text]` 指定label；
+- 检测网页编码是否为gbk或utf-8；
+- 检测是否使用了 @import 导入样式表；
+- 如果CSS、JS指定 类似于“?t=20100405”时间戳，则自动输出最后修改时间，方便对比；
+- 如果background-image超过6个，则提示所有背景图片及大小，超过30KB，标红显示；
