@@ -20,3 +20,9 @@
 - unused
 - strict
 	- This option requires all functions to run in ECMAScript 5's strict mode. Strict mode is a way to opt in to a restricted variant of JavaScript. Strict mode eliminates some JavaScript pitfalls that didn't cause errors by changing them to produce errors. It also fixes mistakes that made it difficult for the JavaScript engines to perform certain optimizations.
+
+筛选后的基础规则：
+- bitwise
+- latedef
+- newcap
+- undef
